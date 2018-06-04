@@ -121,11 +121,11 @@ Packagers of systemd-based distributions are encouraged to include the file in
 the former location. End-user should prefer the latter.
 
 Control of the daemon is then done via systemd. The following example commands
-will run the service once and enable the service to always run on login in the
-future respectively:
+will enable the service to run on login in the future and then start the service
+respectively:
 
-    systemctl --user start spotifyd.service
     systemctl --user enable spotifyd.service
+    systemctl --user start spotifyd.service
 
 # Logging
 In `--no-daemon` mode, the log is written to standard output, otherwise it is
